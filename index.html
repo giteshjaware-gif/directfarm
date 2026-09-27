@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DirectFarm — Sell Your Harvest Directly</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌾</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ SKIP LINK ============ -->
+<a href="#main" class="skip-link" data-i18n="skipLink">Skip to main content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="header-bar">
+    <a href="#home" class="logo" aria-label="DirectFarm Home">
+      <span class="logo-mark" aria-hidden="true">🌾</span>
+      <span class="logo-text">DirectFarm</span>
+    </a>
+
+    <button class="hamburger" id="hamburgerBtn" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" data-i18n="navHome">Home</a>
+      <a href="#sell" data-i18n="navSell">Sell Harvest</a>
+      <a href="#marketplace" data-i18n="navBuyers">Find Buyers</a>
+      <a href="#prices" data-i18n="navPrices">Market Prices</a>
+      <a href="#how" data-i18n="navHow">How It Works</a>
+      <a href="#help" data-i18n="navHelp">Help</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-selector" role="group" aria-label="Language selector">
+        <button class="lang-btn is-active" data-lang-btn="en">English</button>
+        <button class="lang-btn" data-lang-btn="mr">मराठी</button>
+        <button class="lang-btn" data-lang-btn="hi">हिन्दी</button>
+      </div>
+      <button class="btn btn-login" id="loginBtn" data-i18n="navLogin">Farmer Login / Register</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1 data-i18n="heroTitle">Sell Your Harvest Directly</h1>
+        <p class="hero-sub" data-i18n="heroSub">Connect with buyers, compare prices and find better selling opportunities — no middlemen.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg" data-scroll="#sell">
+            <span aria-hidden="true">🌾</span> <span data-i18n="heroSellBtn">Sell Your Harvest</span>
+          </button>
+          <button class="btn btn-secondary btn-lg" data-scroll="#marketplace">
+            <span aria-hidden="true">🛒</span> <span data-i18n="heroBuyBtn">Find Buyers</span>
+          </button>
+          <button class="btn btn-voice btn-lg" id="heroVoiceBtn">
+            <span aria-hidden="true">🎤</span> <span data-i18n="voiceSearchLabel">Search by Voice</span>
+          </button>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Farmer with crops illustration">
+          <ellipse cx="210" cy="345" rx="190" ry="24" fill="#E7DCC0"/>
+          <path d="M20 300 Q210 260 400 300 L400 340 Q210 300 20 340 Z" fill="#8AA24A"/>
+          <path d="M0 320 Q210 285 420 320 L420 345 Q210 315 0 345 Z" fill="#6E8B3E"/>
+          <g transform="translate(60,150)">
+            <rect x="0" y="90" width="14" height="110" fill="#7A5230" rx="4"/>
+            <ellipse cx="7" cy="80" rx="46" ry="60" fill="#F2C744"/>
+            <ellipse cx="7" cy="80" rx="46" ry="60" fill="none" stroke="#D9A61E" stroke-width="3"/>
+            <line x1="-30" y1="60" x2="44" y2="60" stroke="#D9A61E" stroke-width="2"/>
+            <line x1="-34" y1="90" x2="48" y2="90" stroke="#D9A61E" stroke-width="2"/>
+            <line x1="-30" y1="120" x2="44" y2="120" stroke="#D9A61E" stroke-width="2"/>
+          </g>
+          <g transform="translate(150,130)">
+            <rect x="0" y="100" width="14" height="120" fill="#7A5230" rx="4"/>
+            <ellipse cx="7" cy="90" rx="52" ry="68" fill="#F5D25A"/>
+            <ellipse cx="7" cy="90" rx="52" ry="68" fill="none" stroke="#D9A61E" stroke-width="3"/>
+            <line x1="-34" y1="66" x2="50" y2="66" stroke="#D9A61E" stroke-width="2"/>
+            <line x1="-40" y1="100" x2="54" y2="100" stroke="#D9A61E" stroke-width="2"/>
+            <line x1="-34" y1="134" x2="50" y2="134" stroke="#D9A61E" stroke-width="2"/>
+          </g>
+          <g transform="translate(255,158)">
+            <rect x="0" y="88" width="13" height="112" fill="#7A5230" rx="4"/>
+            <ellipse cx="6" cy="78" rx="44" ry="58" fill="#F2C744"/>
+            <ellipse cx="6" cy="78" rx="44" ry="58" fill="none" stroke="#D9A61E" stroke-width="3"/>
+            <line x1="-28" y1="58" x2="40" y2="58" stroke="#D9A61E" stroke-width="2"/>
+            <line x1="-32" y1="86" x2="44" y2="86" stroke="#D9A61E" stroke-width="2"/>
+          </g>
+          <g transform="translate(160,200)">
+            <ellipse cx="60" cy="150" rx="40" ry="10" fill="#00000014"/>
+            <rect x="34" y="70" width="52" height="66" rx="10" fill="#2F5233"/>
+            <circle cx="60" cy="46" r="26" fill="#C98A5B"/>
+            <path d="M34 40 Q60 6 86 40 Q86 20 60 16 Q34 20 34 40Z" fill="#4A3123"/>
+            <rect x="18" y="82" width="20" height="46" rx="9" fill="#2F5233"/>
+            <rect x="82" y="82" width="20" height="46" rx="9" fill="#2F5233"/>
+            <rect x="42" y="130" width="18" height="40" rx="7" fill="#6B4423"/>
+            <rect x="62" y="130" width="18" height="40" rx="7" fill="#6B4423"/>
+            <ellipse cx="60" cy="172" rx="34" ry="8" fill="#7A5230"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section how-it-works" id="how">
+    <h2 class="section-title" data-i18n="howTitle">How It Works</h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <span class="step-icon" aria-hidden="true">👨‍🌾</span>
+        <h3 data-i18n="how1Title">List Your Harvest</h3>
+        <p data-i18n="how1Desc">Tell us what crop you have ready to sell.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-icon" aria-hidden="true">🌾</span>
+        <h3 data-i18n="how2Title">Add Crop Details</h3>
+        <p data-i18n="how2Desc">Add quantity, price and a photo.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-icon" aria-hidden="true">🤝</span>
+        <h3 data-i18n="how3Title">Find Buyers</h3>
+        <p data-i18n="how3Desc">Buyers near you see your listing.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-icon" aria-hidden="true">💰</span>
+        <h3 data-i18n="how4Title">Connect &amp; Sell</h3>
+        <p data-i18n="how4Desc">Talk directly and complete the sale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SELL HARVEST ============ -->
+  <section class="section section-alt" id="sell">
+    <h2 class="section-title" data-i18n="sellTitle">Sell Your Harvest</h2>
+    <p class="section-sub" id="sellLoginHint" data-i18n="sellLoginHint">Please log in as a Farmer to post your harvest.</p>
+
+    <form class="card form-card" id="sellForm" hidden>
+      <div class="form-grid">
+        <label class="field">
+          <span data-i18n="fCrop">Crop Name</span>
+          <select id="cropName" required>
+            <option value="" data-i18n="fChoose">Choose a crop</option>
+            <option value="tomato" data-i18n="cropTomato">Tomato</option>
+            <option value="onion" data-i18n="cropOnion">Onion</option>
+            <option value="potato" data-i18n="cropPotato">Potato</option>
+            <option value="wheat" data-i18n="cropWheat">Wheat</option>
+            <option value="rice" data-i18n="cropRice">Rice</option>
+            <option value="maize" data-i18n="cropMaize">Maize</option>
+          </select>
+        </label>
+        <label class="field">
+          <span data-i18n="fQuantity">Quantity (kg)</span>
+          <input type="number" id="quantity" min="1" required>
+        </label>
+        <label class="field">
+          <span data-i18n="fExpPrice">Expected Price (₹/kg)</span>
+          <input type="number" id="expPrice" min="1" required>
+        </label>
+        <label class="field">
+          <span data-i18n="fLocation">Village / Location</span>
+          <div class="field-with-btn">
+            <input type="text" id="sellLocation" required>
+            <button type="button" class="btn btn-ghost btn-small" id="useLocationBtn">
+              📍 <span data-i18n="fUseLocation">Use My Location</span>
+            </button>
+          </div>
+        </label>
+        <label class="field">
+          <span data-i18n="fHarvestDate">Harvest Date</span>
+          <input type="date" id="harvestDate" required>
+        </label>
+        <label class="field">
+          <span data-i18n="fQuality">Crop Quality</span>
+          <select id="cropQuality" required>
+            <option value="good" data-i18n="qGood">Good</option>
+            <option value="better" data-i18n="qBetter">Better</option>
+            <option value="best" data-i18n="qBest">Best</option>
+          </select>
+        </label>
+        <label class="field field-wide">
+          <span data-i18n="fPhoto">Crop Photo</span>
+          <div class="field-with-btn">
+            <input type="file" id="cropPhoto" accept="image/*">
+            <span aria-hidden="true">📷</span>
+          </div>
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg">
+        🌾 <span data-i18n="fPostBtn">Post Harvest</span>
+      </button>
+      <p class="form-success" id="sellSuccess" role="status" hidden>✓ <span data-i18n="fPosted">Your harvest has been listed!</span></p>
+    </form>
+  </section>
+
+  <!-- ============ DASHBOARD (shown after farmer login) ============ -->
+  <section class="section" id="dashboard" hidden>
+    <h2 class="section-title"><span data-i18n="dashWelcome">Welcome</span>, <span id="dashFarmerName">Farmer</span> 👨‍🌾</h2>
+    <div class="dash-cards">
+      <div class="dash-card"><span class="dash-num" id="dashListings">0</span><span data-i18n="dashMyListings">My Listings</span> 🌾</div>
+      <div class="dash-card"><span class="dash-num" id="dashViews">0</span><span data-i18n="dashViews">Buyer Views</span> 👀</div>
+      <div class="dash-card"><span class="dash-num" id="dashInterested">0</span><span data-i18n="dashInterested">Interested Buyers</span> 🤝</div>
+      <div class="dash-card"><span class="dash-num" id="dashSales">₹0</span><span data-i18n="dashSales">Potential Sales</span> 💰</div>
+    </div>
+    <div class="dash-listings">
+      <h3 data-i18n="dashMyListingsHeading">My Current Listings</h3>
+      <div id="myListingsList" class="listing-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ MARKETPLACE / FIND BUYERS ============ -->
+  <section class="section section-alt" id="marketplace">
+    <h2 class="section-title" data-i18n="marketTitle">Find Buyers</h2>
+
+    <div class="search-bar">
+      <input type="search" id="searchInput" data-i18n-placeholder="searchPlaceholder" placeholder="Search crops...">
+      <button type="button" class="btn btn-voice" id="marketVoiceBtn" aria-label="Search by voice">🎤</button>
+      <div class="voice-status" id="voiceStatus" role="status" aria-live="polite"></div>
+    </div>
+
+    <div class="filters">
+      <label class="filter-field">
+        <span data-i18n="filterCrop">Crop</span>
+        <select id="filterCrop">
+          <option value="" data-i18n="filterAll">All</option>
+          <option value="tomato" data-i18n="cropTomato">Tomato</option>
+          <option value="onion" data-i18n="cropOnion">Onion</option>
+          <option value="potato" data-i18n="cropPotato">Potato</option>
+          <option value="wheat" data-i18n="cropWheat">Wheat</option>
+          <option value="rice" data-i18n="cropRice">Rice</option>
+          <option value="maize" data-i18n="cropMaize">Maize</option>
+        </select>
+      </label>
+      <label class="filter-field">
+        <span data-i18n="filterLocation">Location</span>
+        <select id="filterLocation">
+          <option value="" data-i18n="filterAll">All</option>
+        </select>
+      </label>
+      <label class="filter-field">
+        <span data-i18n="filterMaxPrice">Max Price (₹/kg)</span>
+        <input type="number" id="filterPrice" min="0" placeholder="e.g. 30">
+      </label>
+      <label class="filter-field">
+        <span data-i18n="filterMinQty">Min Quantity (kg)</span>
+        <input type="number" id="filterQty" min="0" placeholder="e.g. 100">
+      </label>
+    </div>
+
+    <div class="listing-grid" id="marketplaceGrid"></div>
+    <p class="empty-state" id="marketEmpty" hidden data-i18n="marketEmpty">No crops found. Try a different search.</p>
+  </section>
+
+  <!-- ============ PRICE COMPARISON ============ -->
+  <section class="section" id="prices">
+    <h2 class="section-title" data-i18n="priceTitle">Compare Before You Sell</h2>
+    <p class="section-note" data-i18n="priceDemo">Displayed prices are demonstration data and may not represent live mandi prices.</p>
+    <div class="price-grid" id="priceGrid"></div>
+  </section>
+
+  <!-- ============ TRANSPORT (prototype) ============ -->
+  <section class="section section-alt" id="transport">
+    <h2 class="section-title">🚚 <span data-i18n="transportTitle">Find Transport</span></h2>
+    <p class="section-note" data-i18n="transportProto">Prototype feature — transport booking is not yet active.</p>
+    <form class="card form-card" id="transportForm">
+      <div class="form-grid">
+        <label class="field">
+          <span data-i18n="transportPickup">Pickup Location</span>
+          <input type="text" id="transportPickup">
+        </label>
+        <label class="field">
+          <span data-i18n="transportDelivery">Delivery Location</span>
+          <input type="text" id="transportDelivery">
+        </label>
+        <label class="field">
+          <span data-i18n="transportQty">Approximate Quantity (kg)</span>
+          <input type="number" id="transportQty" min="0">
+        </label>
+      </div>
+      <button type="submit" class="btn btn-secondary" data-i18n="transportSubmit">Request Transport (Demo)</button>
+    </form>
+  </section>
+
+  <!-- ============ HELP ============ -->
+  <section class="section" id="help">
+    <h2 class="section-title" data-i18n="helpTitle">Help</h2>
+    <div class="help-grid">
+      <details class="help-item">
+        <summary>❓ <span data-i18n="help1Q">How to Sell?</span></summary>
+        <p data-i18n="help1A">Log in as a Farmer, go to "Sell Harvest", fill the form and post it. Your listing appears in the marketplace right away.</p>
+      </details>
+      <details class="help-item">
+        <summary>🎤 <span data-i18n="help2Q">How to Use Voice Search?</span></summary>
+        <p data-i18n="help2A">Press the microphone button and say the crop name and place, like "Find tomato near Pune".</p>
+      </details>
+      <details class="help-item">
+        <summary>💰 <span data-i18n="help3Q">How to Check Prices?</span></summary>
+        <p data-i18n="help3A">Open "Market Prices" to compare the reference price with farmer and buyer prices.</p>
+      </details>
+      <details class="help-item">
+        <summary>🤝 <span data-i18n="help4Q">How to Contact Buyers?</span></summary>
+        <p data-i18n="help4A">On any listing, press "Contact Farmer" or "Send Request" to reach out directly.</p>
+      </details>
+      <details class="help-item">
+        <summary>📷 <span data-i18n="help5Q">How to Upload Crop?</span></summary>
+        <p data-i18n="help5A">In the Sell Harvest form, press "Upload Crop Photo" and choose a clear picture of your crop.</p>
+      </details>
+      <details class="help-item">
+        <summary>📞 <span data-i18n="help6Q">Contact Support</span></summary>
+        <p data-i18n="help6A">Call our helpline at 1800-000-000 (demo number) for assistance in your language.</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <p>🌾 DirectFarm — <span data-i18n="footerTag">A student prototype for direct farmer-to-buyer selling. Built for Smart India Hackathon.</span></p>
+</footer>
+
+<!-- ============ LOGIN / ROLE MODAL ============ -->
+<div class="modal-overlay" id="loginModal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle">
+    <button class="modal-close" id="loginModalClose" aria-label="Close">✕</button>
+    <h2 id="loginModalTitle" data-i18n="loginTitle">Farmer / Buyer Login</h2>
+    <p class="modal-note" data-i18n="loginDemoNote">This is a demo login for the prototype. No real account is created.</p>
+
+    <div class="role-tabs">
+      <button class="role-tab is-active" data-role-tab="farmer" data-i18n="roleFarmer">👨‍🌾 Farmer</button>
+      <button class="role-tab" data-role-tab="buyer" data-i18n="roleBuyer">🛒 Buyer</button>
+    </div>
+
+    <form id="registerForm">
+      <div class="form-grid">
+        <label class="field">
+          <span data-i18n="fName">Full Name</span>
+          <input type="text" id="regName" required>
+        </label>
+        <label class="field">
+          <span data-i18n="fMobile">Mobile Number</span>
+          <input type="tel" id="regMobile" required pattern="[0-9]{10}">
+        </label>
+        <label class="field">
+          <span data-i18n="fVillage">Village</span>
+          <input type="text" id="regVillage">
+        </label>
+        <label class="field">
+          <span data-i18n="fDistrict">District</span>
+          <input type="text" id="regDistrict">
+        </label>
+        <label class="field">
+          <span data-i18n="fState">State</span>
+          <input type="text" id="regState" value="Maharashtra">
+        </label>
+        <label class="field">
+          <span data-i18n="fPrefLang">Preferred Language</span>
+          <select id="regLang">
+            <option value="en">English</option>
+            <option value="mr">मराठी</option>
+            <option value="hi">हिन्दी</option>
+          </select>
+        </label>
+        <label class="field field-wide">
+          <span data-i18n="fMainCrops">Main Crops</span>
+          <input type="text" id="regCrops" data-i18n-placeholder="fMainCropsPh" placeholder="e.g. Tomato, Onion">
+        </label>
+      </div>
+      <button type="button" class="btn btn-ghost btn-small" id="regUseLocationBtn">📍 <span data-i18n="fUseLocation">Use My Location</span></button>
+      <button type="submit" class="btn btn-primary btn-lg" id="regSubmitBtn" data-i18n="regSubmit">Register &amp; Continue</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ CONTACT FARMER MODAL ============ -->
+<div class="modal-overlay" id="contactModal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <button class="modal-close" id="contactModalClose" aria-label="Close">✕</button>
+    <h2 id="contactModalTitle" data-i18n="contactTitle">Contact Farmer</h2>
+    <dl class="contact-details" id="contactDetails"></dl>
+    <div class="contact-actions">
+      <button class="btn btn-secondary" id="contactCallBtn">📞 <span data-i18n="contactCall">Call</span></button>
+      <button class="btn btn-secondary" id="contactWhatsappBtn">💬 <span data-i18n="contactWhatsapp">WhatsApp</span></button>
+      <button class="btn btn-primary" id="contactRequestBtn">📩 <span data-i18n="contactRequest">Send Request</span></button>
+    </div>
+    <p class="form-success" id="contactSuccess" role="status" hidden></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
